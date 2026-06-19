@@ -1,0 +1,14 @@
+{
+  "name": "anthropic-expertise-site",
+  "version": "1.0.0",
+  "description": "Anthropic의 'Agentic coding and persistent returns to expertise' 보고서를 한국어로 쉽게 소개하는 인터랙티브 사이트 + 보고서 기반 챗봇",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
