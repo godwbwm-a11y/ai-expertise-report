@@ -105,6 +105,24 @@
   var chart = document.getElementById("successChart");
   if (chart) barIO.observe(chart);
 
+  /* 프롬프트 비교 탭 */
+  var tabBar = document.getElementById("promptTabs");
+  if (tabBar) {
+    var tabBtns = tabBar.querySelectorAll(".tab-btn");
+    var tabPanels = document.querySelectorAll(".tab-panel");
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.dataset.tab;
+        tabBtns.forEach(function (b) {
+          b.classList.toggle("active", b === btn);
+        });
+        tabPanels.forEach(function (p) {
+          p.classList.toggle("active", p.dataset.tab === key);
+        });
+      });
+    });
+  }
+
   /* ===== 챗봇 ===== */
   var fab = document.getElementById("chatFab");
   var panel = document.getElementById("chatPanel");

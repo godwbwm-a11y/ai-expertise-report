@@ -272,6 +272,77 @@ small{font-size:.78em;color:var(--muted)}
 .triage-card p{font-size:.9rem;color:#cfc7bb}
 .manager-foot{margin-top:22px;color:#e8e3da!important;font-size:1rem;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
 
+/* AI의 구별법 */
+.mini-title{font-size:1.3rem;font-weight:900;margin:46px 0 20px;text-align:center}
+.mini-title.left{text-align:left}
+.signal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.signal-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);position:relative}
+.signal-no{display:inline-block;font-size:.78rem;font-weight:700;color:#fff;background:var(--clay);padding:4px 12px;border-radius:999px;margin-bottom:12px}
+.signal-card h3{font-size:1.18rem;font-weight:900;margin-bottom:10px}
+.signal-card p{font-size:.95rem;color:var(--ink-soft)}
+
+/* 질적 차이 표 */
+.qtable{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.qrow{display:grid;grid-template-columns:0.7fr 1.4fr 1.4fr;border-top:1px solid var(--line)}
+.qrow:first-child{border-top:none}
+.qcell{padding:16px 18px;font-size:.92rem;line-height:1.6}
+.qhead .qcell{font-weight:900;font-size:.95rem;color:#fff}
+.qhead .qlabel{background:var(--ink-soft)}
+.qhead .qnov{background:#c0726e}
+.qhead .qexp{background:var(--green)}
+.qlabel{font-weight:700;background:var(--cream);color:var(--ink-soft)}
+.qnov{background:rgba(224,114,110,.07);color:var(--ink-soft);border-left:1px solid var(--line)}
+.qexp{background:rgba(123,178,116,.09);color:var(--ink-soft);border-left:1px solid var(--line)}
+.dark-foot{color:var(--ink-soft);text-align:center;margin-top:22px}
+.dark-foot b{color:var(--clay-deep)}
+
+/* 탭 + 프롬프트 비교 */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab-btn{
+  background:#fff;border:1px solid var(--line);color:var(--ink-soft);font-family:var(--font);
+  font-weight:700;font-size:.94rem;padding:11px 20px;border-radius:999px;cursor:pointer;transition:.2s;
+}
+.tab-btn:hover{border-color:var(--clay)}
+.tab-btn.active{background:var(--clay);color:#fff;border-color:var(--clay);box-shadow:0 6px 18px rgba(204,120,92,.35)}
+.tab-panel{display:none;animation:fadeIn .4s ease}
+.tab-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cmp-card{border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.cmp-card.nov{background:#fff;border:1px solid rgba(224,114,110,.35)}
+.cmp-card.exp{background:#fff;border:1px solid rgba(123,178,116,.45)}
+.cmp-tag{display:inline-block;font-weight:900;font-size:.9rem;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.cmp-card.nov .cmp-tag{background:rgba(224,114,110,.14);color:#c0564f}
+.cmp-card.exp .cmp-tag{background:rgba(123,178,116,.16);color:#4f8a48}
+.prompt{font-size:.98rem;line-height:1.8;color:var(--ink);background:var(--cream);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.cmp-card.exp .prompt{background:rgba(123,178,116,.08)}
+.prompt u{text-decoration:none;background:linear-gradient(transparent 60%,rgba(204,120,92,.3) 0);font-weight:700;padding:0 1px}
+.cmp-why{font-size:.88rem;color:var(--muted);line-height:1.65}
+.cmp-why b{color:var(--ink-soft)}
+
+.prompt-formula{margin-top:34px;background:var(--ink);color:#fff;border-radius:var(--radius);padding:clamp(24px,4vw,34px);box-shadow:var(--shadow-lg);text-align:center}
+.prompt-formula h3{font-size:1.25rem;font-weight:900;margin-bottom:10px}
+.prompt-formula p{color:#cfc7bb;margin-bottom:18px}
+.prompt-formula p b{color:#e8b9a6}
+.formula-code{display:block;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:16px;font-size:.92rem;line-height:1.8;color:#fff;font-family:var(--font)}
+
+/* 자녀 질문법 */
+.qa-block{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(24px,4vw,38px);box-shadow:var(--shadow)}
+.qa-intro{color:var(--ink-soft);margin-bottom:26px}
+.qa-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.qa-col{border-radius:14px;padding:24px;border:1px solid var(--line)}
+.qa-col.study{background:rgba(204,120,92,.05)}
+.qa-col.taste{background:rgba(123,178,116,.06)}
+.qa-col-head{font-size:1.12rem;font-weight:900;margin-bottom:12px}
+.qa-rule{font-size:.92rem;color:var(--ink-soft);margin-bottom:16px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+.qa-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.qa-list li{font-size:.92rem;line-height:1.7}
+.qa-list .bad{color:#c0564f}
+.qa-list .good{color:var(--ink);font-weight:500}
+.qa-list small{color:var(--muted);font-size:.82em}
+.qa-tip{margin-top:16px;font-size:.88rem;color:var(--ink-soft);background:var(--cream);border-radius:10px;padding:12px 14px}
+.qa-foot{margin-top:24px;background:linear-gradient(135deg,var(--clay),var(--clay-deep));color:#fff;border-radius:14px;padding:20px 24px;font-size:1rem;line-height:1.8}
+
 /* 부모 */
 .parent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .parent-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);transition:transform .25s}
@@ -365,7 +436,7 @@ small{font-size:.78em;color:var(--muted)}
 /* 반응형 */
 @media(max-width:880px){
   .stat-grid{grid-template-columns:repeat(2,1fr)}
-  .finding-grid,.struggle-grid,.parent-grid,.triage{grid-template-columns:1fr}
+  .finding-grid,.struggle-grid,.parent-grid,.triage,.signal-grid,.cmp,.qa-cols{grid-template-columns:1fr}
   .nav-links{
     position:fixed;top:0;right:0;height:100svh;width:min(78vw,300px);
     background:var(--cream);flex-direction:column;gap:0;padding:90px 30px;
@@ -379,6 +450,13 @@ small{font-size:.78em;color:var(--muted)}
   .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
 @media(max-width:680px){
+  .qrow,.qhead{grid-template-columns:1fr}
+  .qcell{border-left:none!important;border-top:1px solid var(--line)}
+  .qrow .qlabel{font-weight:900;background:var(--cream-2)}
+  .qhead{display:none}
+  .qnov::before{content:"🔰 초보자 — ";font-weight:700;color:#c0564f}
+  .qexp::before{content:"⭐ 전문가 — ";font-weight:700;color:#4f8a48}
+  .tab-btn{flex:1 1 calc(50% - 8px);font-size:.86rem;padding:10px 8px}
   .vs-grid{grid-template-columns:1fr;gap:12px}
   .vs-vs{justify-content:center;padding:4px}
   .trend{grid-template-columns:1fr}

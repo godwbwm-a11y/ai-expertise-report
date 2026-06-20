@@ -27,10 +27,12 @@
     <nav class="nav-links" id="navLinks">
       <a href="#summary">핵심 요약</a>
       <a href="#data">데이터로 보기</a>
+      <a href="#classify">AI의 구별법</a>
+      <a href="#prompts">프롬프트 비교</a>
       <a href="#expert">잘 쓰는 사람</a>
       <a href="#struggle">못 쓰는 사람</a>
       <a href="#parents">자녀 교육</a>
-      <a href="#chat-anchor">챗봇에게 질문</a>
+      <a href="#chat-anchor">챗봇</a>
     </nav>
   </header>
 
@@ -222,6 +224,160 @@
               <p>더 크고 중요한 일을 맡기기 시작했습니다.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI는 어떻게 전문가를 알아볼까 -->
+    <section class="section band-cream" id="classify">
+      <div class="container">
+        <span class="eyebrow">한 걸음 더</span>
+        <h2 class="section-title">AI는 프롬프트만 보고<br />어떻게 ‘전문가’를 알아볼까?</h2>
+        <p class="lead">연구진은 세션마다 사용자를 초보/중급/전문가로 나눴습니다. 놀랍게도 기준은
+          ‘직책’이나 ‘경력’이 아니라, <b>프롬프트(지시문)에 드러나는 3가지 신호</b>였습니다.</p>
+
+        <div class="signal-grid">
+          <div class="signal-card reveal">
+            <div class="signal-no">신호 ①</div>
+            <h3>🎯 지시의 ‘정밀함’</h3>
+            <p>얼마나 또렷하게 방향을 잡아주는가. 전문가는 <b>도메인 용어·제약·기준</b>을 자연스럽게 녹여
+              씁니다. 초보자는 <b>맥락 없는 일반적 지시</b>(“알아서 잘”)에 머뭅니다.</p>
+          </div>
+          <div class="signal-card reveal">
+            <div class="signal-no">신호 ②</div>
+            <h3>✅ ‘무엇을 검증하라’는 요청</h3>
+            <p>전문가는 “이 숫자가 ○○와 맞는지 확인해”처럼 <b>AI가 스스로 점검할 기준</b>을 함께 줍니다.
+              이런 ‘검증 지시’의 유무가 전문성을 강하게 드러냅니다.</p>
+          </div>
+          <div class="signal-card reveal">
+            <div class="signal-no">신호 ③</div>
+            <h3>🔧 ‘누가 누구를 교정’하는가</h3>
+            <p>전문가는 AI의 결과를 <b>구체적으로 짚어 교정</b>합니다. 초보자는 거꾸로 AI에게
+              계속 안내·수정을 받는 쪽입니다. 이 방향이 전문성의 핵심 지표였습니다.</p>
+          </div>
+        </div>
+
+        <!-- 질적 차이 표 -->
+        <h3 class="mini-title">그래서 — 답변의 ‘질’이 이렇게 달라집니다</h3>
+        <div class="qtable reveal">
+          <div class="qrow qhead">
+            <div class="qcell qlabel">구분</div>
+            <div class="qcell qnov">초보자 프롬프트 → 답변</div>
+            <div class="qcell qexp">전문가 프롬프트 → 답변</div>
+          </div>
+          <div class="qrow">
+            <div class="qcell qlabel">지시문</div>
+            <div class="qcell qnov">맥락 없는 일반적 지시</div>
+            <div class="qcell qexp">코드·환경·규칙에 대한 깊은 이해가 묻어남</div>
+          </div>
+          <div class="qrow">
+            <div class="qcell qlabel">AI의 추정</div>
+            <div class="qcell qnov">빈칸이 많아 AI가 ‘가정’으로 채움 → 빗나갈 위험</div>
+            <div class="qcell qexp">채울 빈칸이 적어 ‘의도대로’ 정확히 실행</div>
+          </div>
+          <div class="qrow">
+            <div class="qcell qlabel">작업량</div>
+            <div class="qcell qnov">프롬프트당 <b>약 5단계 · 600단어</b></div>
+            <div class="qcell qexp">프롬프트당 <b>약 12단계 · 3,200단어</b></div>
+          </div>
+          <div class="qrow">
+            <div class="qcell qlabel">자율성</div>
+            <div class="qcell qnov">계속 되물어야 진행됨</div>
+            <div class="qcell qexp">한 번 지시로 <b>여러 단계를 알아서</b> 진행</div>
+          </div>
+          <div class="qrow">
+            <div class="qcell qlabel">검증</div>
+            <div class="qcell qnov">검증 기준이 없어 ‘그럴듯한 결과’에서 멈춤</div>
+            <div class="qcell qexp">스스로 점검·검산까지 → <b>신뢰할 수 있는 결과</b></div>
+          </div>
+        </div>
+        <p class="chart-foot dark-foot">결국 AI는 <b>“프롬프트에 담긴 이해의 깊이”만큼</b> 더 멀리, 더 정확히 일합니다.
+          좋은 프롬프트는 ‘기술’이 아니라 <b>‘내 일을 아는 정도’의 표현</b>인 셈이죠.</p>
+      </div>
+    </section>
+
+    <!-- 프롬프트 실제 비교 -->
+    <section class="section" id="prompts">
+      <div class="container">
+        <span class="eyebrow">실전 비교</span>
+        <h2 class="section-title">전문가 vs 초보자, 실제 프롬프트 비교</h2>
+        <p class="lead">같은 일을 시켜도 프롬프트는 이렇게 다릅니다. 아래 분야를 눌러 비교해 보세요.
+          <b>전문가의 프롬프트를 ‘템플릿’처럼 따라 써도</b> 결과가 확 좋아집니다.</p>
+
+        <div class="tabs" id="promptTabs">
+          <button class="tab-btn active" data-tab="report">📊 업무 보고서</button>
+          <button class="tab-btn" data-tab="data">📈 데이터 분석</button>
+          <button class="tab-btn" data-tab="mkt">📣 마케팅 문구</button>
+          <button class="tab-btn" data-tab="acc">🧾 회계 실무</button>
+        </div>
+
+        <div class="tab-panels">
+          <!-- 보고서 -->
+          <div class="tab-panel active" data-tab="report">
+            <div class="cmp">
+              <div class="cmp-card nov">
+                <div class="cmp-tag">🔰 초보자</div>
+                <p class="prompt">“3분기 실적 보고서 좀 써줘.”</p>
+                <div class="cmp-why"><b>왜 아쉬울까:</b> 대상·분량·항목·기준이 없어 AI가 다 ‘가정’해야 합니다. 결과가 빗나가면 처음부터 다시.</div>
+              </div>
+              <div class="cmp-card exp">
+                <div class="cmp-tag">⭐ 전문가</div>
+                <p class="prompt">“3분기 실적 보고서를 <u>임원 대상, A4 1장</u>으로 작성해줘. <u>매출·영업이익·전분기 대비 증감률</u>은 표로, <u>핵심 성과 3가지·리스크 2가지</u>는 불릿으로. 숫자는 <u>첨부 ERP 데이터 기준</u>, 영업이익률은 (영업이익/매출)로 <u>계산하고 검산</u>까지 해줘. 톤은 간결하게.”</p>
+                <div class="cmp-why"><b>왜 강할까:</b> 대상·분량·항목·계산식·검증을 모두 지정 → AI가 한 번에 12단계로 ‘완성형 초안’을 만듭니다.</div>
+              </div>
+            </div>
+          </div>
+          <!-- 데이터 -->
+          <div class="tab-panel" data-tab="data">
+            <div class="cmp">
+              <div class="cmp-card nov">
+                <div class="cmp-tag">🔰 초보자</div>
+                <p class="prompt">“이 엑셀 데이터 분석해줘.”</p>
+                <div class="cmp-why"><b>왜 아쉬울까:</b> ‘무엇을 알고 싶은지’가 없습니다. AI는 평균·합계 같은 뻔한 통계만 나열하기 쉽습니다.</div>
+              </div>
+              <div class="cmp-card exp">
+                <div class="cmp-tag">⭐ 전문가</div>
+                <p class="prompt">“첨부한 <u>고객 이탈 데이터(가입일·마지막접속·요금제·이탈여부)</u>에서 <u>이탈에 가장 영향을 주는 변수 3개</u>를 찾아줘. <u>요금제별 이탈률</u>을 비교하고, <u>가입 후 30/60/90일</u> 구간 이탈 패턴을 분석해줘. 결과는 <u>인사이트 3줄 + 실행 가능한 리텐션 제안 2개</u>로. <u>통계적으로 유의미한지</u>도 확인해줘.”</p>
+                <div class="cmp-why"><b>왜 강할까:</b> 분석의 ‘질문’과 ‘성공 기준’이 분명 → AI가 탐색·검증·제안까지 자율적으로 수행합니다.</div>
+              </div>
+            </div>
+          </div>
+          <!-- 마케팅 -->
+          <div class="tab-panel" data-tab="mkt">
+            <div class="cmp">
+              <div class="cmp-card nov">
+                <div class="cmp-tag">🔰 초보자</div>
+                <p class="prompt">“인스타 광고 문구 만들어줘.”</p>
+                <div class="cmp-why"><b>왜 아쉬울까:</b> 타깃·제품·톤·강점이 없어 ‘누구에게나 통하는, 그래서 아무에게도 안 꽂히는’ 문구가 나옵니다.</div>
+              </div>
+              <div class="cmp-card exp">
+                <div class="cmp-tag">⭐ 전문가</div>
+                <p class="prompt">“<u>20~30대 직장인 여성</u> 대상, <u>5만원대 친환경 텀블러</u> 인스타 광고 문구 <u>3안</u>. 각 안은 <u>후킹 1줄+본문 2줄+CTA</u>. 톤은 ‘실용적이고 위트있게’, 핵심 강점은 보온력이 아니라 <u>디자인</u>. 해시태그는 노출용 5개+브랜드 1개. <u>광고 정책상 과장 표현은 제외</u>해줘.”</p>
+                <div class="cmp-why"><b>왜 강할까:</b> 타깃·포지셔닝·형식·금지사항까지 통제 → 바로 쓸 수 있는 카피가 여러 안 나옵니다.</div>
+              </div>
+            </div>
+          </div>
+          <!-- 회계 (비개발 도메인 전문성 예시) -->
+          <div class="tab-panel" data-tab="acc">
+            <div class="cmp">
+              <div class="cmp-card nov">
+                <div class="cmp-tag">🔰 초보자</div>
+                <p class="prompt">“이 거래 내역 정리해줘.”</p>
+                <div class="cmp-why"><b>왜 아쉬울까:</b> 회계 규칙을 모르면 정리 기준 자체를 못 줍니다. AI도 단순 나열에 그칩니다.</div>
+              </div>
+              <div class="cmp-card exp">
+                <div class="cmp-tag">⭐ 전문가</div>
+                <p class="prompt">“첨부 거래내역을 <u>계정과목별로 분류</u>해줘. 매출은 <u>발생주의</u> 기준, 부가세는 <u>공급가액과 분리</u> 표시. <u>3만원 이상 접대비</u>는 적격증빙 여부를 별도 컬럼으로, <u>전기 이월과 안 맞는 항목</u>은 따로 빼줘. <u>합계가 시산표와 일치</u>하는지 검산까지.”</p>
+                <div class="cmp-why"><b>왜 강할까:</b> 파이썬을 몰라도 ‘회계 도메인 지식’이 곧 강력한 프롬프트 → 보고서가 말한 “직업이 아니라 이해”의 실제 예시입니다.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prompt-formula reveal">
+          <h3>✍️ 전문가 프롬프트 공식</h3>
+          <p>외우기 쉬운 5요소 — <b>목적 · 대상/맥락 · 제약(형식·기준) · 도메인 규칙 · 검증 방법</b></p>
+          <code class="formula-code">[무엇을] + [누구/어떤 상황을 위해] + [형식·분량·기준] + [내 분야의 규칙·예외] + [끝나면 ○○로 점검해줘]</code>
         </div>
       </div>
     </section>
@@ -423,6 +579,46 @@
           <div class="age-row">
             <div class="age-pill">중학생</div>
             <p>숙제를 AI로 ‘대신’ 말고 ‘함께’. <b>먼저 자기 답을 쓰고</b>, AI로 보완·반박해 보게 합니다. 비판적으로 ‘교정하는’ 연습입니다.</p>
+          </div>
+        </div>
+
+        <!-- 자녀에게 가르칠 질문법 -->
+        <div class="qa-block reveal">
+          <h3 class="mini-title left">🗝️ 핵심은 ‘질문하는 법’ — 이렇게 가르쳐 주세요</h3>
+          <p class="qa-intro">전문가의 출발점은 <b>좋은 질문</b>이었습니다. 아이가 AI에게 ‘답을 받는 사람’이 아니라
+            <b>‘좋은 질문을 던지는 사람’</b>이 되도록, 두 영역에서 질문하는 법을 길러주세요.</p>
+
+          <div class="qa-cols">
+            <!-- 학업용 -->
+            <div class="qa-col study">
+              <div class="qa-col-head">📚 학업용 질문법</div>
+              <p class="qa-rule"><b>원칙:</b> 답을 ‘얻는’ 질문(✕) 대신, 이해를 ‘넓히는’ 질문(○)을 하게 합니다.</p>
+              <ul class="qa-list">
+                <li><span class="bad">✕ “이 문제 답 뭐야?”</span><br /><span class="good">○ “내 풀이는 이런데, 어디서 틀렸는지 ‘왜’인지 설명해줘.”</span></li>
+                <li><span class="bad">✕ “독후감 써줘.”</span><br /><span class="good">○ “이 책에서 내가 느낀 건 △△야. 비슷한 다른 관점도 알려줘. 내가 직접 쓸 거야.”</span></li>
+                <li><span class="bad">✕ “조선시대 정리해줘.”</span><br /><span class="good">○ “임진왜란이 안 일어났다면 어떻게 됐을까? 근거와 함께 추측해줘.”</span></li>
+                <li><span class="good">○ “이거 진짜 맞아? 어떻게 확인할 수 있어?” — <b>검증 질문</b>을 늘 마지막에.</span></li>
+              </ul>
+              <p class="qa-tip">💡 부모 코칭: 답을 받으면 “그래서 <b>네 생각은</b> 뭐야?”를 꼭 되물어 주세요.</p>
+            </div>
+
+            <!-- 취향/개인 -->
+            <div class="qa-col taste">
+              <div class="qa-col-head">🎨 취향·개인 관심 질문법</div>
+              <p class="qa-rule"><b>원칙:</b> ‘무엇을 만들고 싶은지’를 스스로 정하고, AI로 ‘넓히고 깊이 파게’ 합니다.</p>
+              <ul class="qa-list">
+                <li><span class="good">○ “나는 공룡 중에 △△가 제일 좋아. 비슷한데 덜 알려진 공룡 3개랑 그 이유를 알려줘.”</span> <small>— 관심을 깊이로</small></li>
+                <li><span class="good">○ “내가 좋아하는 그림 스타일은 이런 느낌인데, 이걸 뭐라고 부르고 누가 잘 그려?”</span> <small>— 취향에 이름 붙이기</small></li>
+                <li><span class="good">○ “이런 게임을 만들고 싶어. 규칙은 내가 정할게, 부족한 부분만 같이 다듬어줘.”</span> <small>— ‘무엇을’의 주도권</small></li>
+                <li><span class="good">○ “나는 이게 왜 좋은지 잘 모르겠어. 질문 몇 개 던져서 내 취향을 찾게 도와줘.”</span> <small>— 자기이해</small></li>
+              </ul>
+              <p class="qa-tip">💡 부모 코칭: 결과보다 <b>“그 질문 정말 좋다!”</b>고 질문 자체를 칭찬해 주세요.</p>
+            </div>
+          </div>
+
+          <div class="qa-foot">
+            <b>한 줄 요약:</b> 학업에선 <b>“왜? 어떻게 확인하지?”</b>를, 취향에선 <b>“무엇을 만들고 싶지?”</b>를
+            묻는 아이로 키워주세요. 이 두 질문이 곧 미래의 ‘AI를 잘 쓰는 전문가’의 핵심 근육입니다. 💪
           </div>
         </div>
       </div>
