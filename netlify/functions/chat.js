@@ -121,8 +121,8 @@ exports.handler = async function (event) {
       headers: {
         Authorization: "Bearer " + apiKey,
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://anthropic-expertise.netlify.app",
-        "X-Title": "AI 시대 전문성의 힘",
+        "HTTP-Referer": "https://ai-expertise-report.netlify.app",
+        "X-Title": "AI Expertise Report Chatbot",
       },
       body: JSON.stringify(payload),
     });
